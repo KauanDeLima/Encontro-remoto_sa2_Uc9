@@ -24,6 +24,9 @@ body {
     padding-bottom: 20px;
 }
 
+
+
+
 .container-grid{
     max-width: 1280px;
     margin: 0 auto;  /* para centralizar o grid! */
@@ -38,13 +41,23 @@ body {
 }
 
 
+
+
 #menu-principal{
     /* border: 1px solid green; */
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+     transition: left 0.4s;
 }
+
+
+.navbarShow{
+    left: 0 !important;
+}
+
+
 /* --------------navbar-------------- */
 #menu-principal a{
     color: white;
@@ -52,6 +65,7 @@ body {
     /* border: 1px solid red; */
     padding: 20px 15px 20px 15px;
     text-transform: uppercase;
+   
 }
 
 
@@ -137,4 +151,138 @@ body {
     margin: 0;
     color: white;
     
+}
+
+                    /*  css dos card bootstrap */.container {
+    max-width: 1200px;
+}
+
+.btn-danger {
+   background-color: salmon;
+   border: 1px solid salmon;
+}
+
+.btn-danger:hover {
+    background-color: #f76555;
+    border: 1px solid #f76555 ;
+}
+
+.card {
+    margin-top: 20px ;
+    max-width: 270px;
+    color: white;
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+    background-image: linear-gradient(to bottom, #444444, #1e1c21);
+}
+.card .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-top: 10px;
+    text-transform: uppercase !important;
+    border-radius: 10px;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 1.3rem;
+}
+
+.card-price {
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 1.5rem;
+}
+
+/*  media queries */
+
+/* celulares : 0 - 767px */
+/*  tablets : 768px - 991px*/
+/*  desktops: 992px para cima */
+
+
+                /* tablet display */
+@media screen and (max-width:991px) {
+        .cabecalho{
+            padding: 0 20px;
+            padding: 20px 25px;
+           
+        }
+
+        .header-flex{
+             height: 60px;
+
+        }
+
+
+        .menu-bars{
+            /* OBS: para mudar a cor de um svg, precisa ir no codigo da imagem e procurar o "FILL" */
+            width: 45px;
+            cursor: pointer;
+        }
+
+     /* #menu-principal{
+          display: none;
+        } */
+
+    /* #menu-principal a {
+        color: red;
+       
+    } */
+
+
+}
+
+
+
+                        /* para celulares */
+
+@media screen and (max-width:767px) {
+
+    .logoripo{
+        width: 150px;
+    }
+
+    .menu-bars{
+        width: 35px;
+        color: white;
+    }
+
+    #menu-principal a {
+            color: white;
+    }
+    #menu-principal{
+        position: fixed;
+        top: 0px;
+        left: -150%;
+
+        width: 80%;
+        height: 100%;
+        background-color: #1e1c21;
+        z-index: 10;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+    #menu-principal a {
+        width: 80% ;
+        height: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        
+        text-align: center;
+        
+} 
+}
+
+
+/* para desktops */
+
+@media screen and (min-width:991px){
+    .menu-bars{
+        display: none;
+    }
 }
